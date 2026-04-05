@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Ucznia</title>
+   
+</head>
+<body>
+
+    <h2>Dane ucznia</h2>
+    <form>
+        <div >
+            Imię:<br>
+            <input type="text" id="imie" >
+        </div>
+        <div>
+            Nazwisko:<br>
+            <input type="text" id="nazwisko" >
+        </div>
+        <div>
+            Wiek:<br>
+            <input type="number" id="wiek" >
+        </div>
+        <button type="button" onclick="wyswietlDane()">Wykonaj</button>
+    </form>
+
+    <div>
+        <h3>Wprowadzone dane:</h3>
+        <p id="pokazImie"></p>
+        <p id="pokazNazwisko"></p>
+        <p id="pokazWiek"></p>
+    </div>
+
+<script>
+    function wyswietlDane() {
+        const imie = document.getElementById('imie').value;
+        const nazwisko = document.getElementById('nazwisko').value;
+        const wiek = document.getElementById('wiek').value;
+
+
+        if (imie === "" || nazwisko === "" || wiek === "") {
+            alert("Proszę wypełnić wszystkie pola!");
+            return;
+        }
+
+        document.getElementById('pokazImie').innerText = "Imię: " + imie;
+        document.getElementById('pokazNazwisko').innerText = "Nazwisko: " + nazwisko;
+        document.getElementById('pokazWiek').innerText = "Wiek: " + wiek;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+</head>
+<body>
+
+    <h2>Formularz Kontaktowy</h2>
+
+    <form id="mojFormularz">
+        <div>
+            Imię:
+            <input type="text" id="imie" name="imie">
+        </div>
+        <div>
+            Nazwisko:
+            <input type="text" id="nazwisko" name="nazwisko">
+        </div>
+        <div>
+           Adres e-mail:
+            <input type="email" id="email" name="email">
+        </div>
+        <button type="button" onclick="sprawdzFormularz()">Oblicz</button>
+    </form>
+
+    <script>
+        function sprawdzFormularz() {
+
+            const imie = document.getElementById('imie').value.trim();
+            const nazwisko = document.getElementById('nazwisko').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+
+            if (imie === "") {
+                alert("Pole 'Imię' nie zostało wypełnione!");
+            }
+
+            if (nazwisko === "") {
+                alert("Pole 'Nazwisko' nie zostało wypełnione!");
+            }
+
+            if (email === "") {
+                alert("Pole 'Adres e-mail' nie zostało wypełnione!");
+            }
+        }
+    </script>
+
+</body>
+</html>

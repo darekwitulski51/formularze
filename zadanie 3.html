@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Data Urodzin</h2>
+    <form>
+       <div>Dzień:<br>
+        <input type="number" id="dzien"></div>
+        <div>Miesiąc:<br>
+        <input type="number" id="miesiac"></div>
+        <div>Rok:<br>
+        <input type="number" id="rok"></div>
+        <button type="button" onclick="oblicz()">Oblicz</button>
+    </form>
+
+    <div>
+        <p id="wynik"></p>
+    </div>
+
+    <script>
+        function oblicz() {
+        const dzien = document.getElementById('dzien').value;
+        const miesiac = document.getElementById('miesiac').value;
+        const rok = document.getElementById('rok').value;
+
+        if (!dzien || !miesiac || !rok) {
+            document.getElementById('wynik').innerHTML = "Proszę wypełnić wszystkie pola!";
+            return;
+        }
+
+        
+        }
+    </script>
+</body>
+</html>
